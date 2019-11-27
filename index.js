@@ -7,14 +7,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }).then(jokes => {
         let ul = document.querySelector("ul");
         jokes.forEach(joke => {
-            let li = document.createElement("li");
-            li.innerText = joke.setup;
-            ul.appendChild(li);
-            let div = document.createElement("div");
-            div.innerText = joke.punchline;
-            li.appendChild(div);
+            let li = document.createElement("li")
+            li.innerText= joke.setup + " " + joke.punchline;
+            ul.appendChild(li)
         })
-    }).catch(err => {
-        console.log(err);
-    })
+        const hidePunch = () =>{
+            
+        }
+        
+    }).catch(err => console.log(err))
 })
