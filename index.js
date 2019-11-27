@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
             let li = document.createElement("li");
             li.innerText = joke.setup;
             ul.appendChild(li);
+            let div = document.createElement("div");
+            div.innerText = joke.punchline;
+            li.appendChild(div);
         })
     }).catch(err => {
         console.log(err);
